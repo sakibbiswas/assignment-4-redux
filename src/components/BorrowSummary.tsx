@@ -1,5 +1,3 @@
-// 
-
 
 import { useGetBorrowSummaryQuery } from '../features/borrows/borrowsApi';
 
