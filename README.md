@@ -1,69 +1,104 @@
-# React + TypeScript + Vite
+# 📚 Library Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack **Library Management System** built with the **MERN stack** (MongoDB, Express, React, Node.js) and **TypeScript**. It supports book inventory, borrowing functionality, and viewing borrow summaries.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+### 💻 Frontend
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* React
+* TypeScript
+* Tailwind CSS
+* Redux Toolkit Query
+* React Hook Form
+* React Toastify
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🌐 Backend
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+* Node.js
+* Express.js
+* TypeScript
+* MongoDB (Mongoose)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+
+## 📦 Features
+
+* ✅ Add, Edit, and Delete Books
+* ✅ Borrow Books with Quantity & Due Date
+* ✅ Update Book Availability Based on Borrow
+* ✅ View Borrow Summary by Book
+* ✅ REST API with Express
+* ✅ Form Validation & Toast Notifications
+* ✅ Modular Folder Structure
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/library-management-system.git
+cd library-management-system
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# For both frontend and backend
+npm install
 ```
+
+### 3. Setup MongoDB Connection
+
+Create a `.env` file or directly edit `server.ts`:
+
+```ts
+const MONGO_URI = 'your-mongodb-connection-string';
+```
+
+### 4. Run Backend
+
+```bash
+npm run dev
+# or
+ts-node-dev src/server.ts
+```
+
+### 5. Run Frontend
+
+```bash
+npm run dev:client
+```
+
+---
+
+## 🔗 API Endpoints
+
+### Books
+
+* `GET    /api/books` – Get all books
+* `POST   /api/books` – Add new book
+* `PUT    /api/books/:id` – Update book
+* `DELETE /api/books/:id` – Delete book
+
+### Borrows
+
+* `POST   /api/borrows/:bookId` – Borrow a book
+* `GET    /api/borrows/summary/all` – Borrow summary grouped by book
+
+
+
+
+
+## 🙋‍♂️ Author
+
+* Developed by **Sorna Sakib**
+* 📧 \[[YourEmail@example.com](mailto:YourEmail@example.com)]
+
+
+
+## 📝 License
+
+This project is licensed under the MIT License.
