@@ -82,7 +82,7 @@ npm run dev:client
 
 ## 🙋‍♂️ Author
 
-* Developed by **Sakib**
+* Developed by **Sakib** 
 
 
 
