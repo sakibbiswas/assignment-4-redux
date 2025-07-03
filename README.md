@@ -52,27 +52,19 @@ npm install
 
 ### 3. Setup MongoDB Connection
 
-Create a `.env` file or directly edit `server.ts`:
+` MONGO_URI = "mongodb+srv://sazzadur:sakib9988@cluster0.uxaxmsb.mongodb.net/todosDB?retryWrites=true&w=majority&appName=Cluster0";`
 
-```ts
-const MONGO_URI = 'your-mongodb-connection-string';
-```
 
 ### 4. Run Backend
 
 ```bash
 npm run dev
-# or
-ts-node-dev src/server.ts
-```
+
 
 ### 5. Run Frontend
 
 ```bash
 npm run dev:client
-```
-
----
 
 ## 🔗 API Endpoints
 
@@ -94,11 +86,9 @@ npm run dev:client
 
 ## 🙋‍♂️ Author
 
-* Developed by **Sorna Sakib**
-* 📧 \[[YourEmail@example.com](mailto:YourEmail@example.com)]
+* Developed by **Sakib**
 
 
 
-## 📝 License
 
-This project is licensed under the MIT License.
+
