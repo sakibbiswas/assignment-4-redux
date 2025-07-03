@@ -39,8 +39,7 @@ A full-stack **Library Management System** built with the **MERN stack** (MongoD
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/library-management-system.git
-cd library-management-system
+git clone https://github.com/sakibbiswas/assignment-4-redux
 ```
 
 ### 2. Install Dependencies
@@ -66,7 +65,7 @@ npm run dev
 ```bash
 npm run dev:client
 
-## 🔗 API Endpoints
+##  API Endpoints
 
 ### Books
 
@@ -79,9 +78,6 @@ npm run dev:client
 
 * `POST   /api/borrows/:bookId` – Borrow a book
 * `GET    /api/borrows/summary/all` – Borrow summary grouped by book
-
-
-
 
 
 ## 🙋‍♂️ Author
