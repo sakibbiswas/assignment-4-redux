@@ -1,39 +1,3 @@
-// import { Route, Routes, NavLink } from 'react-router-dom';
-// import BooksPage from './pages/BooksPage';
-// import CreateBookPage from './pages/CreateBookPage';
-// import EditBookPage from './pages/EditBookPage';
-// import BorrowPage from './pages/BorrowPage';
-// import BorrowSummaryPage from './pages/BorrowSummaryPage';
-// import { ToastContainer } from 'react-toastify';
-// import 'react-toastify/dist/ReactToastify.css';
-
-// export default function App() {
-//   return (
-//     <div>
-//       <nav className="bg-blue-600 text-white p-4 flex gap-6">
-//         <NavLink to="/books">All Books</NavLink>
-//         <NavLink to="/create-book">Add Book</NavLink>
-//         <NavLink to="/borrow-summary">Borrow Summary</NavLink>
-//       </nav>
-
-//       <div className="container mx-auto p-4">
-//         <Routes>
-//           <Route path="/books" element={<BooksPage />} />
-//           <Route path="/create-book" element={<CreateBookPage />} />
-//           <Route path="/edit-book/:id" element={<EditBookPage />} />
-//           <Route path="/borrow/:bookId" element={<BorrowPage />} />
-//           <Route path="/borrow-summary" element={<BorrowSummaryPage />} />
-//           <Route path="*" element={<BooksPage />} />
-//         </Routes>
-//       </div>
-
-//       <ToastContainer />
-//     </div>
-//   );
-// }
-
-
-
 import { Route, Routes, NavLink } from 'react-router-dom';
 import BooksPage from './pages/BooksPage';
 import CreateBookPage from './pages/CreateBookPage';
@@ -45,29 +9,47 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export default function App() {
   return (
-    <div>
-      <nav className="bg-blue-600 text-white p-4 flex gap-6">
-        <NavLink
-          to="/books"
-          className={({ isActive }) => (isActive ? 'font-bold underline' : '')}
-        >
-          All Books
-        </NavLink>
-        <NavLink
-          to="/create-book"
-          className={({ isActive }) => (isActive ? 'font-bold underline' : '')}
-        >
-          Add Book
-        </NavLink>
-        <NavLink
-          to="/borrow-summary"
-          className={({ isActive }) => (isActive ? 'font-bold underline' : '')}
-        >
-          Borrow Summary
-        </NavLink>
+    <div className="min-h-screen bg-gray-50">
+      {/* Navbar */}
+      <nav className="bg-blue-600 text-white px-6 py-4 shadow-md">
+        <div className="max-w-6xl mx-auto flex flex-wrap gap-4 items-center">
+          <NavLink
+            to="/books"
+            className={({ isActive }) =>
+              `px-3 py-1 rounded-md transition ${
+                isActive ? 'bg-white text-blue-600 font-semibold' : 'hover:bg-blue-500'
+              }`
+            }
+          >
+            📚 All Books
+          </NavLink>
+
+          <NavLink
+            to="/create-book"
+            className={({ isActive }) =>
+              `px-3 py-1 rounded-md transition ${
+                isActive ? 'bg-white text-blue-600 font-semibold' : 'hover:bg-blue-500'
+              }`
+            }
+          >
+            ➕ Add Book
+          </NavLink>
+
+          <NavLink
+            to="/borrow-summary"
+            className={({ isActive }) =>
+              `px-3 py-1 rounded-md transition ${
+                isActive ? 'bg-white text-blue-600 font-semibold' : 'hover:bg-blue-500'
+              }`
+            }
+          >
+            📊 Borrow Summary
+          </NavLink>
+        </div>
       </nav>
 
-      <div className="container mx-auto p-4">
+      {/* Page Content */}
+      <main className="max-w-6xl mx-auto px-4 py-6">
         <Routes>
           <Route path="/books" element={<BooksPage />} />
           <Route path="/create-book" element={<CreateBookPage />} />
@@ -76,9 +58,10 @@ export default function App() {
           <Route path="/borrow-summary" element={<BorrowSummaryPage />} />
           <Route path="*" element={<BooksPage />} />
         </Routes>
-      </div>
+      </main>
 
-      <ToastContainer />
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 }
+

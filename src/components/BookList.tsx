@@ -1,4 +1,3 @@
-// 
 
 import { useGetBooksQuery, useDeleteBookMutation } from '../features/books/booksApi';
 import { Link } from 'react-router-dom';
