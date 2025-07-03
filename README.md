@@ -36,25 +36,29 @@ A full-stack **Library Management System** built with the **MERN stack** (MongoD
 
 ## ⚙️ Installation & Setup
 
-### 1. Clone the Repository
+###  Clone the Repository
 
 ```bash
 git clone https://github.com/sakibbiswas/assignment-4-redux
 ```
+### Deploy
+`vercel link :` https://library-management-system-nine-iota.vercel.app
 
-### 2. Install Dependencies
+
+
+###  Install Dependencies
 
 ```bash
 # For both frontend and backend
 npm install
 ```
 
-### 3. Setup MongoDB Connection
+###  Setup MongoDB Connection
 
 ` MONGO_URI = "mongodb+srv://sazzadur:sakib9988@cluster0.uxaxmsb.mongodb.net/todosDB?retryWrites=true&w=majority&appName=Cluster0";`
 
 
-### 4. Run Backend
+###  Run Backend
 
 ```bash
 npm run dev
