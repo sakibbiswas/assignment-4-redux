@@ -1,6 +1,3 @@
-
-// controllers/borrowController.ts
-
 import type { Request, Response, NextFunction } from 'express';
 import Borrow from '../models/Borrow';
 import Book from '../models/Book';
