@@ -13,7 +13,9 @@ interface BorrowSummary {
 
 export const borrowsApi = createApi({
   reducerPath: 'borrowsApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/api/borrows' }), // ✅ fixed
+  baseQuery: fetchBaseQuery({
+    baseUrl: import.meta.env.PROD ? '/api/borrows' : 'http://localhost:5000/api/borrows'
+  }),
   tagTypes: ['Borrow'],
   endpoints: (builder) => ({
     borrowBook: builder.mutation<any, { bookId: string; data: BorrowPayload }>({
@@ -32,4 +34,3 @@ export const borrowsApi = createApi({
 });
 
 export const { useBorrowBookMutation, useGetBorrowSummaryQuery } = borrowsApi;
-

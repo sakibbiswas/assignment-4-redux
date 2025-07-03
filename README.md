@@ -63,7 +63,7 @@ npm run dev
 ### 5. Run Frontend
 
 ```bash
-npm run dev:client
+npm run dev
 
 ##  API Endpoints
 
